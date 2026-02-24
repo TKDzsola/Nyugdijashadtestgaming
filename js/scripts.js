@@ -1,15 +1,16 @@
 /*!
-* Nyugdíjashadtest Gaming - Magyar Scripts
+* Nyugdíjashadtest Gaming - Mobil-optimalizált szkriptek
 */
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // 1. AOS (Animate On Scroll) inicializálása
+    // 1. AOS (Animate On Scroll) inicializálása - mobilon finomított késleltetés
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 1000,
+            duration: 800,
             once: true,
-            offset: 100
+            offset: 50,
+            disable: 'mobile' // Opcionális: ha túl sok mobilon az animáció, 'mobile'-lal kikapcsolható
         });
     }
 
@@ -27,7 +28,7 @@ window.addEventListener('DOMContentLoaded', event => {
     navbarShrink();
     document.addEventListener('scroll', navbarShrink);
 
-    // 3. ScrollSpy aktiválása (Menüpontok követése)
+    // 3. ScrollSpy aktiválása
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -36,7 +37,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // 4. Reszponzív menü bezárása kattintás után (Mobilnézet)
+    // 4. Reszponzív menü automatikus bezárása kattintás után (Mobilnézethez elengedhetetlen)
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -48,5 +49,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
