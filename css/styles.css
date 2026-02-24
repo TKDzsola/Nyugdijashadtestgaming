@@ -1,99 +1,119 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+/* * NYUGDÍJASHADTEST GAMING - CUSTOM DARK STYLES
+* Alapértelmezett sötét háttér és világos szövegek kényszerítése
 */
-
-/* ITT TALÁLHATÓ AZ EREDETI BOOTSTRAP ÉS GRAYSCALE KÓD 
-   (A 11 ezer sorod érintetlenül marad ebben a szekcióban)
-*/
-
-/* ... (az összes eredeti sorod helye) ... */
-
-/* ==========================================================================
-   NYUGDÍJASHADTEST GAMING - EGYEDI SÖTÉT TÉMA (SHERIFF STÍLUS)
-   ========================================================================== */
 
 :root {
-  --gaming-bg: #0d0d0d;
-  --gaming-card: rgba(255, 255, 255, 0.05);
-  --gaming-glass: rgba(0, 0, 0, 0.6);
-  --bs-primary: #64a19d;
-  --bs-body-color: #ffffff;
-  --bs-body-bg: #0d0d0d;
+    --gaming-bg: #0d0d0d;
+    --gaming-darker: #080808;
+    --gaming-card: rgba(255, 255, 255, 0.05);
+    --gaming-glass: rgba(0, 0, 0, 0.6);
+    --bs-primary: #64a19d;
+    --bs-secondary: #4a4a4a;
+    --bs-body-color: #ffffff;
+    --bs-body-bg: #0d0d0d;
 }
 
 body {
-  background-color: var(--gaming-bg) !important;
-  color: #ffffff !important;
-  letter-spacing: 0.0625em;
+    background-color: var(--gaming-bg) !important;
+    color: var(--bs-body-color) !important;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.0625em;
+    overflow-x: hidden;
 }
 
-/* Navigáció javítása */
+/* Navigáció */
 #mainNav {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  min-height: 3.5rem;
+    min-height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: background-color 0.3s ease;
 }
 
 #mainNav .navbar-brand, #mainNav .nav-link {
-  color: #ffffff !important;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 @media (min-width: 992px) {
-  #mainNav {
-    background-color: transparent !important;
-  }
-  #mainNav.navbar-shrink {
-    background-color: rgba(0, 0, 0, 0.95) !important;
-  }
+    #mainNav { background-color: transparent; }
+    #mainNav.navbar-shrink {
+        background-color: rgba(0, 0, 0, 0.95);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    }
 }
 
-/* Masthead sötétítése */
+/* Masthead (Sötétítő réteggel) */
 .masthead {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #0d0d0d 100%), url("../assets/img/bg-masthead.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
+    height: 100vh;
+    min-height: 500px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, var(--gaming-bg) 100%), 
+                url("../assets/img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
-/* Sheriff-stílusú Glassmorphism doboz */
+/* Glassmorphism Blur Box */
 .bg-blur-box {
-  background: var(--gaming-glass) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    background: var(--gaming-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Sötét szekciók kényszerítése */
-.about-section, .projects-section, .signup-section, .contact-section, footer {
-  background-color: var(--gaming-bg) !important;
-  color: #ffffff !important;
+/* Eseménynaptár (Calendar) Egyedi stílusok */
+.calendar-section { background-color: var(--gaming-darker) !important; }
+
+.event-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background-color: var(--gaming-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Gaming kártyák sötétítése */
-.dark-card, .contact-section .card {
-  background: var(--gaming-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: #ffffff !important;
-  transition: all 0.3s ease;
+.event-card:hover {
+    transform: scale(1.02);
+    border-color: var(--bs-primary) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.date-box {
+    min-width: 85px;
+    color: #fff;
+    line-height: 1.1;
+}
+
+/* Gaming Kártyák (Community) */
+.dark-card {
+    background: var(--gaming-card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: all 0.3s ease;
 }
 
 .dark-card:hover {
-  border-color: var(--bs-primary) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  transform: translateY(-5px);
+    border-color: var(--bs-primary) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-5px);
 }
 
-/* Szövegek láthatósága */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #ffffff !important;
+/* Szövegek és Segédosztályok */
+h1, h2, h3, h4, .navbar-brand { font-family: "Varela Round", sans-serif; }
+.text-white-50 { color: rgba(255, 255, 255, 0.6) !important; }
+.italic { font-style: italic; }
+
+/* Gombok */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    padding: 1rem 2rem;
 }
 
-.text-white-50 {
-  color: rgba(255, 255, 255, 0.5) !important;
+/* Footer ikonok */
+.footer-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
-
-p {
-  color: rgba(255, 255, 255, 0.8) !important;
+.footer-icon:hover {
+    color: var(--bs-primary) !important;
+    transform: scale(1.2);
 }

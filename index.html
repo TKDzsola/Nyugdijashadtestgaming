@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Nyugdíjashadtest Gaming - Tapasztalt közösség, sötét taktikai fókusszal." />
+        <meta name="description" content="Nyugdíjashadtest Gaming - Események, közösség és taktikai játék." />
         <meta name="author" content="Nyugdíjashadtest" />
         <title>Nyugdíjashadtest Gaming</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -15,31 +15,32 @@
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/custom-gaming.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand d-flex align-items-center" href="#page-top">
-                    <img src="./assets/img/Nyugdijashadtestlogo.jpg" alt="Logo" height="60" class="rounded me-2">
-                    <span class="fw-bold d-none d-sm-inline">Nyugdíjashadtest</span>
+                    <img src="./assets/img/Nyugdijashadtestlogo.jpg" alt="Logo" height="60" class="rounded me-2 border border-secondary shadow">
+                    <span class="fw-bold">Nyugdíjashadtest</span>
                 </a>
-                <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Navigáció váltása">
+                    Menü
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link text-white" href="#about">Hadműveletek</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#community">Közösség</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#signup">Jelentkezés</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="#about">Hadműveletek</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="#calendar">Naptár</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="#community">Közösség</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="#signup">Jelentkezés</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         
         <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center masthead-content">
                 <div class="text-center bg-blur-box p-5 rounded-4 shadow-lg" data-aos="zoom-in">
                     <h1 class="mx-auto my-0 text-uppercase fw-bolder text-white">Nyugdíjashadtest</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Több mint játék. Tapasztalat. Fegyelem. Közösség.</h2>
@@ -48,24 +49,68 @@
             </div>
         </header>
 
-        <section class="about-section text-center bg-black py-5" id="about">
+        <section class="about-section text-center py-5" id="about">
             <div class="container px-4 px-lg-5" data-aos="fade-up">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 border-bottom border-secondary border-opacity-25 pb-4">
                         <h2 class="text-white mb-4">Stratégiai Áttekintés</h2>
                         <p class="text-white-50 leading-relaxed">
-                            A Nyugdíjashadtest Gaming a stabilitást és a bajtársiasságot képviseli. A Sheriff projekthez hasonlóan itt is a komolyság és a szervezett játék a fő szempont, de már tiszta gaming környezetben.
+                            A Nyugdíjashadtest Gaming a stabilitást és a bajtársiasságot képviseli. A Sheriff projekthez hasonlóan itt is a komolyság és a szervezett játék a fő szempont, egy támogató, érett közösségben.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="projects-section bg-dark py-5" id="community">
+        <section class="calendar-section py-5 bg-dark" id="calendar">
+            <div class="container px-4 px-lg-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold text-white text-uppercase">Hadműveleti Terv</h2>
+                    <p class="text-white-50 italic">Közelgő események és közös bevetések</p>
+                </div>
+                
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="list-group shadow-lg" data-aos="fade-up">
+                            <div class="list-group-item bg-black text-white border-secondary border-opacity-10 d-flex align-items-center p-4 mb-2 rounded shadow-sm event-card">
+                                <div class="date-box text-center me-4 p-2 bg-primary rounded shadow">
+                                    <span class="d-block fw-bold fs-4">FEB</span>
+                                    <span class="d-block">27</span>
+                                </div>
+                                <div class="event-details flex-grow-1">
+                                    <h4 class="mb-1 text-primary fw-bold text-uppercase">Péntek Esti Hadművelet</h4>
+                                    <p class="mb-0 text-white-50 small"><i class="far fa-clock me-2"></i> 20:00 - Discord</p>
+                                    <small class="text-muted italic">Minden hadtesttag számára kötelező megjelenés.</small>
+                                </div>
+                                <div class="event-action d-none d-md-block">
+                                    <span class="badge bg-danger rounded-pill">FPS / COOP</span>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item bg-black text-white border-secondary border-opacity-10 d-flex align-items-center p-4 mb-2 rounded shadow-sm event-card">
+                                <div class="date-box text-center me-4 p-2 bg-secondary rounded shadow">
+                                    <span class="d-block fw-bold fs-4">MÁR</span>
+                                    <span class="d-block">05</span>
+                                </div>
+                                <div class="event-details flex-grow-1">
+                                    <h4 class="mb-1 text-secondary fw-bold text-uppercase">Klánközi Verseny</h4>
+                                    <p class="mb-0 text-white-50 small"><i class="far fa-clock me-2"></i> 19:00 - Szerver</p>
+                                    <small class="text-muted italic">Taktikai megmérettetés a szövetségesekkel.</small>
+                                </div>
+                                <div class="event-action d-none d-md-block">
+                                    <span class="badge bg-warning text-dark rounded-pill">TOURNAMENT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section py-5 bg-black" id="community">
             <div class="container px-4 px-lg-5">
                 <div class="text-center mb-5" data-aos="fade-down">
                     <h2 class="fw-bold text-white text-uppercase">Közösségi Bázis</h2>
-                    <p class="text-white-50 font-italic">Itt érheted el a hadtest egységeit.</p>
                 </div>
                 
                 <div class="row gx-4">
@@ -73,20 +118,19 @@
                         <div class="card h-100 dark-card text-white text-center p-4 rounded-4 shadow">
                             <div class="card-body">
                                 <i class="fab fa-discord fa-4x mb-3 text-primary"></i>
-                                <h3 class="h4 fw-bold">Discord Szerver</h3>
-                                <p class="text-white-50 small mb-4 font-italic">Élő taktikai rádió és közösségi hub.</p>
-                                <a href="https://discord.gg/fd4bdHFhyz" target="_blank" class="btn btn-primary btn-lg px-4 rounded-pill">Csatlakozás</a>
+                                <h3 class="h4 fw-bold">Discord</h3>
+                                <p class="text-white-50 small mb-4 italic">Élő taktikai rádió és közösségi hub.</p>
+                                <a href="https://discord.gg/fd4bdHFhyz" target="_blank" class="btn btn-primary px-4 rounded-pill fw-bold">Belépés</a>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-6 mb-4" data-aos="fade-left">
                         <div class="card h-100 dark-card text-white text-center p-4 rounded-4 shadow">
                             <div class="card-body">
                                 <i class="fab fa-facebook fa-4x mb-3 text-primary"></i>
-                                <h3 class="h4 fw-bold">Facebook Csoport</h3>
-                                <p class="text-white-50 small mb-4 font-italic">Hírek és nyilvános toborzás helyszíne.</p>
-                                <a href="#!" target="_blank" class="btn btn-outline-primary btn-lg px-4 rounded-pill text-white">Megtekintés</a>
+                                <h3 class="h4 fw-bold text-white">Facebook</h3>
+                                <p class="text-white-50 small mb-4 italic">Hírek és nyilvános toborzás.</p>
+                                <a href="#!" target="_blank" class="btn btn-outline-primary px-4 rounded-pill text-white fw-bold">Megtekintés</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +147,7 @@
                         <form class="form-signup" id="contactForm">
                             <div class="input-group">
                                 <input class="form-control form-control-lg bg-dark text-white border-secondary shadow-none" type="email" placeholder="Email címed..." />
-                                <button class="btn btn-primary px-4 shadow" type="submit">Küldés</button>
+                                <button class="btn btn-primary px-4 shadow fw-bold" type="submit">Küldés</button>
                             </div>
                         </form>
                     </div>
@@ -111,20 +155,19 @@
             </div>
         </section>
 
-        <footer class="footer bg-black small text-center text-white-50 py-5 border-top border-secondary border-opacity-25">
+        <footer class="footer small text-center text-white-50 py-5 bg-black">
             <div class="container px-4">
                 <div class="mb-4">
-                    <a class="mx-2 text-white-50 fs-3 footer-icon" href="#!"><i class="fab fa-facebook"></i></a>
-                    <a class="mx-2 text-white-50 fs-3 footer-icon" href="https://discord.gg/fd4bdHFhyz" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a class="mx-2 text-white-50 fs-3 footer-icon" href="#!"><i class="fab fa-twitch"></i></a>
+                    <a class="mx-2 text-white fs-3 footer-icon" href="#!"><i class="fab fa-facebook"></i></a>
+                    <a class="mx-2 text-white fs-3 footer-icon" href="https://discord.gg/fd4bdHFhyz" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a class="mx-2 text-white fs-3 footer-icon" href="#!"><i class="fab fa-twitch"></i></a>
                 </div>
-                <p class="mb-0">Copyright &copy; Nyugdíjashadtest Gaming 2026</p>
+                <p class="mb-0 text-white opacity-75">Copyright &copy; Nyugdíjashadtest Gaming 2026</p>
             </div>
         </footer>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/custom-gaming.js"></script>
     </body>
 </html>
