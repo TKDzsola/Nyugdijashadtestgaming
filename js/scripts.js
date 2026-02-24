@@ -1,11 +1,10 @@
 /*!
-* Nyugdíjashadtest Gaming - Official Scripts
+* Nyugdíjashadtest Gaming - Magyar Scripts
 */
 
 window.addEventListener('DOMContentLoaded', event => {
 
     // 1. AOS (Animate On Scroll) inicializálása
-    // Biztosítja az elemek elegáns beúszását
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 1000,

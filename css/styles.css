@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* * NYUGDÍJASHADTEST GAMING - CUSTOM DARK EDITION
+/* * NYUGDÍJASHADTEST GAMING - MAGYAR NYELVŰ KIADÁS
 * Alapértelmezett sötét háttér és fehér szövegek kényszerítése
 */
 
@@ -74,8 +74,8 @@ body {
 /* Szekciók */
 section { background-color: var(--gaming-bg) !important; }
 
-/* Eseménynaptár Egyedi stílusok */
-.calendar-section { background-color: var(--gaming-darker) !important; }
+/* Hadműveleti Terv (Naptár) */
+.calendar-section { background-color: var(--gaming-darker) !important; padding: 6rem 0; }
 
 .event-card {
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -94,7 +94,7 @@ section { background-color: var(--gaming-bg) !important; }
     line-height: 1.1;
 }
 
-/* Kommunikációs Kártyák */
+/* Közösségi Platformok Kártyák */
 .dark-card {
     background: var(--gaming-card) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -120,8 +120,18 @@ h1, h2, h3, h4, .navbar-brand { font-family: "Varela Round", sans-serif; color: 
     color: #fff !important;
 }
 
-/* Footer ikonok */
-.footer { background-color: var(--gaming-darker) !important; }
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* Footer */
+.footer { background-color: var(--gaming-darker) !important; border-top: 1px solid rgba(255, 255, 255, 0.05); }
 .footer-icon {
     transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block;
