@@ -1,17 +1,16 @@
 @charset "UTF-8";
-/* * NYUGDÍJASHADTEST GAMING - CUSTOM DARK STYLES
-* Alapértelmezett sötét háttér és világos szövegek kényszerítése
+/* * NYUGDÍJASHADTEST GAMING - CUSTOM DARK EDITION
+* Alapértelmezett sötét háttér és fehér szövegek kényszerítése
 */
 
 :root {
     --gaming-bg: #0d0d0d;
-    --gaming-darker: #080808;
+    --gaming-darker: #050505;
     --gaming-card: rgba(255, 255, 255, 0.05);
-    --gaming-glass: rgba(0, 0, 0, 0.6);
+    --gaming-glass: rgba(0, 0, 0, 0.65);
     --bs-primary: #64a19d;
     --bs-secondary: #4a4a4a;
     --bs-body-color: #ffffff;
-    --bs-body-bg: #0d0d0d;
 }
 
 body {
@@ -20,6 +19,7 @@ body {
     font-family: 'Nunito', sans-serif;
     letter-spacing: 0.0625em;
     overflow-x: hidden;
+    margin: 0;
 }
 
 /* Navigáció */
@@ -27,23 +27,32 @@ body {
     min-height: 3.5rem;
     background-color: rgba(0, 0, 0, 0.95);
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#mainNav .navbar-brand, #mainNav .nav-link {
+#mainNav .navbar-brand {
     color: #ffffff !important;
     text-transform: uppercase;
     font-weight: 700;
 }
 
+#mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-transform: uppercase;
+}
+
 @media (min-width: 992px) {
-    #mainNav { background-color: transparent; }
+    #mainNav { 
+        background-color: transparent; 
+        border-bottom: none;
+    }
     #mainNav.navbar-shrink {
         background-color: rgba(0, 0, 0, 0.95);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
     }
 }
 
-/* Masthead (Sötétítő réteggel) */
+/* Masthead */
 .masthead {
     height: 100vh;
     min-height: 500px;
@@ -54,7 +63,7 @@ body {
     align-items: center;
 }
 
-/* Glassmorphism Blur Box */
+/* Glassmorphism Doboz */
 .bg-blur-box {
     background: var(--gaming-glass);
     backdrop-filter: blur(15px);
@@ -62,7 +71,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Eseménynaptár (Calendar) Egyedi stílusok */
+/* Szekciók */
+section { background-color: var(--gaming-bg) !important; }
+
+/* Eseménynaptár Egyedi stílusok */
 .calendar-section { background-color: var(--gaming-darker) !important; }
 
 .event-card {
@@ -78,16 +90,15 @@ body {
 }
 
 .date-box {
-    min-width: 85px;
-    color: #fff;
+    min-width: 90px;
     line-height: 1.1;
 }
 
-/* Gaming Kártyák (Community) */
+/* Kommunikációs Kártyák */
 .dark-card {
     background: var(--gaming-card) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .dark-card:hover {
@@ -96,8 +107,8 @@ body {
     transform: translateY(-5px);
 }
 
-/* Szövegek és Segédosztályok */
-h1, h2, h3, h4, .navbar-brand { font-family: "Varela Round", sans-serif; }
+/* Szövegek */
+h1, h2, h3, h4, .navbar-brand { font-family: "Varela Round", sans-serif; color: #fff !important; }
 .text-white-50 { color: rgba(255, 255, 255, 0.6) !important; }
 .italic { font-style: italic; }
 
@@ -106,14 +117,19 @@ h1, h2, h3, h4, .navbar-brand { font-family: "Varela Round", sans-serif; }
     background-color: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
     padding: 1rem 2rem;
+    color: #fff !important;
 }
 
 /* Footer ikonok */
+.footer { background-color: var(--gaming-darker) !important; }
 .footer-icon {
     transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block;
+    color: #fff !important;
+    opacity: 0.7;
 }
 .footer-icon:hover {
     color: var(--bs-primary) !important;
+    opacity: 1;
     transform: scale(1.2);
 }

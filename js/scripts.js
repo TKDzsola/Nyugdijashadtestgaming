@@ -1,11 +1,11 @@
 /*!
-* Start Bootstrap - Grayscale v7.0.6
-* Nyugdíjashadtest Gaming - Animációkkal bővített verzió
+* Nyugdíjashadtest Gaming - Official Scripts
 */
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // 1. AOS (Animate On Scroll) Inicializálása
+    // 1. AOS (Animate On Scroll) inicializálása
+    // Biztosítja az elemek elegáns beúszását
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 1000,
@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
-    // 2. Navbar zsugorítás (Navbar shrink)
+    // 2. Navigációs sáv zsugorítása görgetéskor
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) { return; }
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', event => {
     navbarShrink();
     document.addEventListener('scroll', navbarShrink);
 
-    // 3. ScrollSpy aktiválása
+    // 3. ScrollSpy aktiválása (Menüpontok követése)
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // 4. Reszponzív menü bezárása kattintás után (Mobil nézet)
+    // 4. Reszponzív menü bezárása kattintás után (Mobilnézet)
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
