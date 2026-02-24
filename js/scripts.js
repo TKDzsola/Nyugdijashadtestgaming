@@ -1,15 +1,21 @@
 /*!
 * Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+* Nyugdíjashadtest Gaming Custom Scripts
 */
-//
-// Scripts
-// 
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
+    // 1. AOS (Animate On Scroll) Inicializálása
+    // Ez felel a Sheriff oldalnál látott beúszó animációkért
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000, // Az animáció hossza ms-ben
+            once: true,     // Csak egyszer fusson le görgetésnél
+            offset: 100     // Mennyivel előbb induljon az animáció (px)
+        });
+    }
+
+    // 2. Navbar zsugorítási funkció (Navbar shrink)
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -20,16 +26,16 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
     };
 
-    // Shrink the navbar 
+    // Navbar zsugorítása az oldal betöltésekor
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
+    // Navbar zsugorítása görgetéskor
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    // 3. Bootstrap ScrollSpy aktiválása
+    // Automatikusan frissíti a menüben az aktív pontot görgetés közben
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -38,7 +44,8 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // 4. Reszponzív menü bezárása kattintás után
+    // Mobilon bezárja a menüt, ha kiválasztottunk egy menüpontot
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
